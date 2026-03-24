@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Forefront Training | Elite B2B Sales Training</title>
-  <meta name="description" content="Forefront Training delivers elite sales training programmes for corporate teams. We turn average salespeople into top performers." />
+  <title>Forefront Training | Elite B2B Sales Training UK</title>
+  <meta name="description" content="Forefront Training delivers elite B2B sales training programmes for corporate teams across the UK. Bespoke programmes. Measurable results. Trusted by leading organisations." />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -12,555 +12,223 @@
     :root {
       --navy: #0B1F3A;
       --navy-light: #122847;
+      --navy-mid: #1a3a5c;
       --gold: #C9A84C;
       --gold-light: #E2C078;
+      --gold-pale: rgba(201,168,76,0.12);
       --white: #FFFFFF;
       --off-white: #F4F6F9;
       --grey: #8A9BB0;
       --dark-grey: #4A5568;
+      --light-border: #E2E8F0;
     }
 
     html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--white);
-      color: var(--navy);
-      line-height: 1.6;
-    }
+    body { font-family: 'Inter', sans-serif; background: var(--white); color: var(--navy); line-height: 1.6; }
 
     /* ===== NAV ===== */
     nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 100;
-      background: rgba(11, 31, 58, 0.97);
-      backdrop-filter: blur(10px);
-      padding: 1rem 5%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      position: fixed; top: 0; width: 100%; z-index: 100;
+      background: rgba(11,31,58,0.97); backdrop-filter: blur(12px);
+      padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
     }
-
-    .logo {
-      font-size: 1.4rem;
-      font-weight: 800;
-      color: var(--white);
-      letter-spacing: -0.5px;
-    }
-
+    .logo { font-size: 1.35rem; font-weight: 800; color: var(--white); letter-spacing: -0.5px; }
     .logo span { color: var(--gold); }
-
-    .nav-links { display: flex; gap: 2rem; list-style: none; }
-    .nav-links a {
-      color: rgba(255,255,255,0.8);
-      text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 500;
-      transition: color 0.2s;
-    }
+    .nav-links { display: flex; gap: 2rem; list-style: none; align-items: center; }
+    .nav-links a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 0.88rem; font-weight: 500; transition: color 0.2s; }
     .nav-links a:hover { color: var(--gold); }
-
-    .nav-cta {
-      background: var(--gold);
-      color: var(--navy) !important;
-      padding: 0.5rem 1.2rem;
-      border-radius: 6px;
-      font-weight: 700 !important;
-    }
+    .nav-cta { background: var(--gold) !important; color: var(--navy) !important; padding: 0.5rem 1.3rem; border-radius: 6px; font-weight: 700 !important; }
 
     /* ===== HERO ===== */
     .hero {
       min-height: 100vh;
-      background: linear-gradient(135deg, var(--navy) 0%, #1a3a5c 100%);
-      display: flex;
-      align-items: center;
-      padding: 8rem 5% 5rem;
-      position: relative;
-      overflow: hidden;
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+      display: flex; align-items: center; padding: 8rem 5% 5rem; position: relative; overflow: hidden;
     }
-
     .hero::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      right: -20%;
-      width: 600px;
-      height: 600px;
-      background: radial-gradient(circle, rgba(201,168,76,0.12) 0%, transparent 70%);
-      border-radius: 50%;
+      content: ''; position: absolute; top: -30%; right: -15%; width: 700px; height: 700px;
+      background: radial-gradient(circle, rgba(201,168,76,0.1) 0%, transparent 65%); border-radius: 50%;
     }
-
-    .hero-content { max-width: 700px; position: relative; z-index: 1; }
-
+    .hero::after {
+      content: ''; position: absolute; bottom: -20%; left: -10%; width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(26,58,92,0.8) 0%, transparent 70%); border-radius: 50%;
+    }
+    .hero-content { max-width: 750px; position: relative; z-index: 1; }
     .hero-badge {
-      display: inline-block;
-      background: rgba(201,168,76,0.15);
-      border: 1px solid rgba(201,168,76,0.4);
-      color: var(--gold);
-      font-size: 0.8rem;
-      font-weight: 600;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      padding: 0.4rem 1rem;
-      border-radius: 20px;
-      margin-bottom: 1.5rem;
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: rgba(201,168,76,0.15); border: 1px solid rgba(201,168,76,0.35);
+      color: var(--gold); font-size: 0.78rem; font-weight: 600; letter-spacing: 1.5px;
+      text-transform: uppercase; padding: 0.4rem 1rem; border-radius: 20px; margin-bottom: 1.5rem;
     }
-
-    .hero h1 {
-      font-size: clamp(2.5rem, 5vw, 4rem);
-      font-weight: 900;
-      color: var(--white);
-      line-height: 1.1;
-      margin-bottom: 1.5rem;
-      letter-spacing: -1px;
-    }
-
+    .hero-badge::before { content: '●'; font-size: 0.5rem; animation: pulse 2s infinite; }
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
+    .hero h1 { font-size: clamp(2.4rem, 5vw, 4rem); font-weight: 900; color: var(--white); line-height: 1.1; margin-bottom: 1.5rem; letter-spacing: -1.5px; }
     .hero h1 span { color: var(--gold); }
-
-    .hero p {
-      font-size: 1.15rem;
-      color: rgba(255,255,255,0.75);
-      margin-bottom: 2.5rem;
-      max-width: 560px;
-      line-height: 1.8;
-    }
-
-    .hero-buttons { display: flex; gap: 1rem; flex-wrap: wrap; }
-
-    .btn-primary {
-      background: var(--gold);
-      color: var(--navy);
-      padding: 0.9rem 2rem;
-      border-radius: 8px;
-      font-weight: 700;
-      font-size: 1rem;
-      text-decoration: none;
-      transition: all 0.2s;
-      display: inline-block;
-    }
-    .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
-
-    .btn-secondary {
-      background: transparent;
-      color: var(--white);
-      padding: 0.9rem 2rem;
-      border-radius: 8px;
-      font-weight: 600;
-      font-size: 1rem;
-      text-decoration: none;
-      border: 1px solid rgba(255,255,255,0.3);
-      transition: all 0.2s;
-      display: inline-block;
-    }
+    .hero p { font-size: 1.1rem; color: rgba(255,255,255,0.72); margin-bottom: 2.5rem; max-width: 580px; line-height: 1.85; }
+    .hero-buttons { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 3.5rem; }
+    .btn-primary { background: var(--gold); color: var(--navy); padding: 0.9rem 2rem; border-radius: 8px; font-weight: 700; font-size: 0.98rem; text-decoration: none; transition: all 0.25s; display: inline-block; }
+    .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 8px 25px rgba(201,168,76,0.35); }
+    .btn-secondary { background: transparent; color: var(--white); padding: 0.9rem 2rem; border-radius: 8px; font-weight: 600; font-size: 0.98rem; text-decoration: none; border: 1px solid rgba(255,255,255,0.25); transition: all 0.25s; display: inline-block; }
     .btn-secondary:hover { border-color: var(--gold); color: var(--gold); }
+    .hero-stats { display: flex; gap: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); flex-wrap: wrap; }
+    .stat-number { font-size: 2.2rem; font-weight: 900; color: var(--gold); }
+    .stat-label { font-size: 0.82rem; color: rgba(255,255,255,0.55); margin-top: 0.2rem; }
 
-    .hero-stats {
-      display: flex;
-      gap: 3rem;
-      margin-top: 4rem;
-      padding-top: 2rem;
-      border-top: 1px solid rgba(255,255,255,0.1);
-    }
-
-    .stat-number {
-      font-size: 2rem;
-      font-weight: 900;
-      color: var(--gold);
-    }
-
-    .stat-label {
-      font-size: 0.85rem;
-      color: rgba(255,255,255,0.6);
-      margin-top: 0.2rem;
-    }
+    /* ===== AWARD BAR ===== */
+    .award-bar { background: var(--gold); padding: 0.9rem 5%; display: flex; justify-content: center; align-items: center; gap: 3rem; flex-wrap: wrap; }
+    .award-item { font-size: 0.82rem; font-weight: 700; color: var(--navy); display: flex; align-items: center; gap: 0.5rem; }
 
     /* ===== CLIENTS ===== */
-    .clients {
-      background: var(--off-white);
-      padding: 3rem 5%;
-      text-align: center;
-    }
+    .clients { background: var(--off-white); padding: 3.5rem 5%; text-align: center; }
+    .clients-label { font-size: 0.78rem; letter-spacing: 2px; text-transform: uppercase; color: var(--grey); font-weight: 600; margin-bottom: 2rem; }
+    .client-logos { display: flex; justify-content: center; align-items: center; gap: 2.5rem; flex-wrap: wrap; }
+    .client-logo { font-size: 0.92rem; font-weight: 700; color: var(--dark-grey); opacity: 0.55; letter-spacing: 0.3px; padding: 0.5rem 1rem; border: 1px solid var(--light-border); border-radius: 6px; background: white; transition: opacity 0.2s; }
+    .client-logo:hover { opacity: 0.85; }
 
-    .clients p {
-      font-size: 0.85rem;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      color: var(--grey);
-      font-weight: 600;
-      margin-bottom: 2rem;
-    }
-
-    .client-logos {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 3rem;
-      flex-wrap: wrap;
-    }
-
-    .client-logo {
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--dark-grey);
-      opacity: 0.6;
-      letter-spacing: 0.5px;
-    }
-
-    /* ===== SECTION STYLES ===== */
+    /* ===== SECTIONS ===== */
     section { padding: 6rem 5%; }
-
-    .section-tag {
-      font-size: 0.8rem;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--gold);
-      font-weight: 700;
-      margin-bottom: 1rem;
-    }
-
-    .section-title {
-      font-size: clamp(2rem, 4vw, 2.8rem);
-      font-weight: 800;
-      color: var(--navy);
-      line-height: 1.2;
-      margin-bottom: 1rem;
-      letter-spacing: -0.5px;
-    }
-
-    .section-subtitle {
-      font-size: 1.05rem;
-      color: var(--dark-grey);
-      max-width: 600px;
-      line-height: 1.8;
-    }
+    .section-tag { font-size: 0.78rem; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); font-weight: 700; margin-bottom: 1rem; }
+    .section-title { font-size: clamp(1.9rem, 3.5vw, 2.8rem); font-weight: 800; color: var(--navy); line-height: 1.2; margin-bottom: 1.2rem; letter-spacing: -0.5px; }
+    .section-subtitle { font-size: 1.05rem; color: var(--dark-grey); max-width: 600px; line-height: 1.85; }
 
     /* ===== SERVICES ===== */
     .services { background: var(--white); }
-
     .services-header { text-align: center; margin-bottom: 4rem; }
     .services-header .section-subtitle { margin: 0 auto; }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-    }
-
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 1.8rem; }
     .service-card {
-      background: var(--off-white);
-      border-radius: 12px;
-      padding: 2.5rem;
-      border: 1px solid transparent;
-      transition: all 0.3s;
-      position: relative;
-      overflow: hidden;
+      background: var(--off-white); border-radius: 14px; padding: 2.5rem;
+      border: 1px solid transparent; transition: all 0.3s; position: relative; overflow: hidden;
     }
-
-    .service-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 3px;
-      background: var(--gold);
-      transform: scaleX(0);
-      transition: transform 0.3s;
-    }
-
-    .service-card:hover {
-      border-color: rgba(201,168,76,0.3);
-      transform: translateY(-4px);
-      box-shadow: 0 20px 40px rgba(11,31,58,0.1);
-    }
-
+    .service-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--gold); transform: scaleX(0); transition: transform 0.3s; }
+    .service-card:hover { border-color: rgba(201,168,76,0.25); transform: translateY(-5px); box-shadow: 0 20px 45px rgba(11,31,58,0.1); }
     .service-card:hover::before { transform: scaleX(1); }
+    .service-icon { font-size: 2.2rem; margin-bottom: 1.2rem; }
+    .service-card h3 { font-size: 1.15rem; font-weight: 700; color: var(--navy); margin-bottom: 0.8rem; }
+    .service-card p { font-size: 0.92rem; color: var(--dark-grey); line-height: 1.75; }
+    .service-tag { display: inline-block; margin-top: 1.2rem; font-size: 0.75rem; font-weight: 600; color: var(--gold); background: var(--gold-pale); padding: 0.25rem 0.7rem; border-radius: 20px; }
 
-    .service-icon {
-      font-size: 2.5rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .service-card h3 {
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: var(--navy);
-      margin-bottom: 0.8rem;
-    }
-
-    .service-card p {
-      font-size: 0.95rem;
-      color: var(--dark-grey);
-      line-height: 1.7;
-    }
+    /* ===== OUTCOME STRIP ===== */
+    .outcome-strip { background: var(--navy); padding: 4rem 5%; }
+    .outcome-strip-inner { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; text-align: center; }
+    .outcome-item { padding: 1.5rem; }
+    .outcome-value { font-size: 2.8rem; font-weight: 900; color: var(--gold); line-height: 1; }
+    .outcome-label { font-size: 0.88rem; color: rgba(255,255,255,0.6); margin-top: 0.5rem; line-height: 1.5; }
 
     /* ===== WHY US ===== */
-    .why-us {
-      background: var(--navy);
-      color: var(--white);
-    }
-
-    .why-us-inner {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 5rem;
-      align-items: center;
-    }
-
-    .why-us .section-title { color: var(--white); }
-    .why-us .section-subtitle { color: rgba(255,255,255,0.7); }
-
+    .why-us { background: var(--off-white); }
+    .why-us-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
     .features-list { margin-top: 2.5rem; display: flex; flex-direction: column; gap: 1.5rem; }
-
     .feature-item { display: flex; gap: 1rem; align-items: flex-start; }
+    .feature-check { width: 26px; height: 26px; background: var(--gold-pale); border: 1px solid var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; color: var(--gold); font-size: 0.75rem; }
+    .feature-text h4 { font-weight: 700; font-size: 1rem; margin-bottom: 0.3rem; }
+    .feature-text p { font-size: 0.9rem; color: var(--dark-grey); line-height: 1.65; }
+    .why-us-visual { background: var(--navy); border-radius: 18px; padding: 3rem; }
+    .metric-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    .metric-item { text-align: center; padding: 1.5rem; background: rgba(255,255,255,0.06); border-radius: 10px; border: 1px solid rgba(255,255,255,0.08); }
+    .metric-value { font-size: 2.2rem; font-weight: 900; color: var(--gold); }
+    .metric-desc { font-size: 0.82rem; color: rgba(255,255,255,0.55); margin-top: 0.4rem; line-height: 1.5; }
 
-    .feature-check {
-      width: 24px;
-      height: 24px;
-      background: rgba(201,168,76,0.2);
-      border: 1px solid var(--gold);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      margin-top: 2px;
-      color: var(--gold);
-      font-size: 0.75rem;
+    /* ===== INDUSTRIES ===== */
+    .industries { background: var(--white); }
+    .industries-header { text-align: center; margin-bottom: 4rem; }
+    .industries-header .section-subtitle { margin: 0 auto; }
+    .industries-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.2rem; }
+    .industry-item {
+      text-align: center; padding: 1.8rem 1rem; border: 1px solid var(--light-border);
+      border-radius: 12px; transition: all 0.25s; cursor: default;
     }
-
-    .feature-text h4 {
-      font-weight: 700;
-      font-size: 1rem;
-      margin-bottom: 0.3rem;
-    }
-
-    .feature-text p {
-      font-size: 0.9rem;
-      color: rgba(255,255,255,0.6);
-      line-height: 1.6;
-    }
-
-    .why-us-visual {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 16px;
-      padding: 3rem;
-    }
-
-    .metric-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
-
-    .metric-item { text-align: center; padding: 1.5rem; background: rgba(255,255,255,0.05); border-radius: 10px; }
-
-    .metric-value {
-      font-size: 2.2rem;
-      font-weight: 900;
-      color: var(--gold);
-    }
-
-    .metric-desc {
-      font-size: 0.85rem;
-      color: rgba(255,255,255,0.6);
-      margin-top: 0.3rem;
-    }
-
-    /* ===== TESTIMONIALS ===== */
-    .testimonials { background: var(--off-white); }
-    .testimonials-header { text-align: center; margin-bottom: 4rem; }
-    .testimonials-header .section-subtitle { margin: 0 auto; }
-
-    .testimonials-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-    }
-
-    .testimonial-card {
-      background: var(--white);
-      border-radius: 12px;
-      padding: 2rem;
-      box-shadow: 0 4px 20px rgba(11,31,58,0.06);
-    }
-
-    .stars { color: var(--gold); font-size: 1.1rem; margin-bottom: 1rem; }
-
-    .testimonial-text {
-      font-size: 0.95rem;
-      color: var(--dark-grey);
-      line-height: 1.8;
-      margin-bottom: 1.5rem;
-      font-style: italic;
-    }
-
-    .testimonial-author { display: flex; align-items: center; gap: 1rem; }
-
-    .author-avatar {
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      background: var(--navy);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--gold);
-      font-weight: 700;
-      font-size: 1rem;
-    }
-
-    .author-name { font-weight: 700; font-size: 0.9rem; color: var(--navy); }
-    .author-role { font-size: 0.8rem; color: var(--grey); }
+    .industry-item:hover { border-color: var(--gold); background: var(--gold-pale); }
+    .industry-icon { font-size: 2rem; margin-bottom: 0.8rem; }
+    .industry-item p { font-size: 0.88rem; font-weight: 600; color: var(--navy); }
 
     /* ===== PROCESS ===== */
-    .process { background: var(--white); }
+    .process { background: var(--off-white); }
     .process-header { text-align: center; margin-bottom: 4rem; }
     .process-header .section-subtitle { margin: 0 auto; }
-
-    .process-steps {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 2rem;
-      position: relative;
-    }
-
-    .process-step { text-align: center; padding: 2rem 1.5rem; }
-
-    .step-number {
-      width: 56px;
-      height: 56px;
-      background: var(--navy);
-      color: var(--gold);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 900;
-      font-size: 1.2rem;
-      margin: 0 auto 1.5rem;
-    }
-
-    .process-step h3 {
-      font-size: 1.1rem;
-      font-weight: 700;
-      margin-bottom: 0.8rem;
-      color: var(--navy);
-    }
-
+    .process-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; position: relative; }
+    .process-step { text-align: center; padding: 2.5rem 1.5rem; background: var(--white); border-radius: 14px; border: 1px solid var(--light-border); transition: all 0.25s; }
+    .process-step:hover { border-color: rgba(201,168,76,0.3); box-shadow: 0 8px 25px rgba(11,31,58,0.08); }
+    .step-number { width: 56px; height: 56px; background: var(--navy); color: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 1.1rem; margin: 0 auto 1.5rem; }
+    .process-step h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.8rem; color: var(--navy); }
     .process-step p { font-size: 0.9rem; color: var(--dark-grey); line-height: 1.7; }
 
+    /* ===== TESTIMONIALS ===== */
+    .testimonials { background: var(--white); }
+    .testimonials-header { text-align: center; margin-bottom: 4rem; }
+    .testimonials-header .section-subtitle { margin: 0 auto; }
+    .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+    .testimonial-card { background: var(--off-white); border-radius: 14px; padding: 2.2rem; border: 1px solid var(--light-border); transition: all 0.25s; }
+    .testimonial-card:hover { border-color: rgba(201,168,76,0.3); box-shadow: 0 8px 30px rgba(11,31,58,0.07); }
+    .stars { color: var(--gold); font-size: 1rem; margin-bottom: 1.2rem; letter-spacing: 2px; }
+    .testimonial-text { font-size: 0.95rem; color: var(--dark-grey); line-height: 1.85; margin-bottom: 1.8rem; font-style: italic; }
+    .testimonial-author { display: flex; align-items: center; gap: 1rem; }
+    .author-avatar { width: 44px; height: 44px; border-radius: 50%; background: var(--navy); display: flex; align-items: center; justify-content: center; color: var(--gold); font-weight: 700; font-size: 0.9rem; flex-shrink: 0; }
+    .author-name { font-weight: 700; font-size: 0.9rem; color: var(--navy); }
+    .author-role { font-size: 0.78rem; color: var(--grey); margin-top: 0.1rem; }
+    .testimonial-company { font-size: 0.75rem; font-weight: 600; color: var(--gold); margin-top: 0.2rem; }
+
+    /* ===== CASE STUDY ===== */
+    .case-study { background: var(--navy); padding: 6rem 5%; }
+    .case-study-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+    .case-study .section-tag { color: var(--gold); }
+    .case-study .section-title { color: var(--white); }
+    .case-study p { color: rgba(255,255,255,0.7); line-height: 1.85; margin-bottom: 1.5rem; font-size: 1rem; }
+    .case-results { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-top: 2rem; }
+    .case-result-item { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 1.5rem; text-align: center; }
+    .case-result-value { font-size: 2rem; font-weight: 900; color: var(--gold); }
+    .case-result-label { font-size: 0.82rem; color: rgba(255,255,255,0.55); margin-top: 0.3rem; }
+
     /* ===== CTA ===== */
-    .cta-section {
-      background: linear-gradient(135deg, var(--navy) 0%, #1a3a5c 100%);
-      text-align: center;
-      padding: 8rem 5%;
-    }
-
-    .cta-section h2 {
-      font-size: clamp(2rem, 4vw, 3rem);
-      font-weight: 900;
-      color: var(--white);
-      margin-bottom: 1.5rem;
-      letter-spacing: -0.5px;
-    }
-
+    .cta-section { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%); text-align: center; padding: 8rem 5%; position: relative; overflow: hidden; }
+    .cta-section::before { content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 600px; height: 600px; background: radial-gradient(circle, rgba(201,168,76,0.08) 0%, transparent 70%); border-radius: 50%; }
+    .cta-section h2 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; color: var(--white); margin-bottom: 1.5rem; letter-spacing: -0.5px; position: relative; z-index: 1; }
     .cta-section h2 span { color: var(--gold); }
-
-    .cta-section p {
-      font-size: 1.1rem;
-      color: rgba(255,255,255,0.7);
-      margin-bottom: 2.5rem;
-      max-width: 500px;
-      margin-left: auto;
-      margin-right: auto;
-    }
+    .cta-section p { font-size: 1.1rem; color: rgba(255,255,255,0.7); margin-bottom: 2.5rem; max-width: 500px; margin-left: auto; margin-right: auto; position: relative; z-index: 1; }
+    .cta-trust { margin-top: 2rem; font-size: 0.82rem; color: rgba(255,255,255,0.45); position: relative; z-index: 1; }
 
     /* ===== CONTACT ===== */
     .contact { background: var(--off-white); }
-
-    .contact-inner {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 5rem;
-      align-items: start;
-    }
-
+    .contact-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
     .contact-form { display: flex; flex-direction: column; gap: 1.2rem; }
-
-    .form-group { display: flex; flex-direction: column; gap: 0.5rem; }
-
-    label { font-size: 0.85rem; font-weight: 600; color: var(--navy); }
-
-    input, textarea, select {
-      padding: 0.8rem 1rem;
-      border: 1px solid #D1D9E6;
-      border-radius: 8px;
-      font-size: 0.95rem;
-      font-family: 'Inter', sans-serif;
-      color: var(--navy);
-      background: var(--white);
-      transition: border-color 0.2s;
-    }
-
-    input:focus, textarea:focus, select:focus {
-      outline: none;
-      border-color: var(--gold);
-    }
-
-    textarea { height: 140px; resize: vertical; }
-
-    .contact-info h3 {
-      font-size: 1.5rem;
-      font-weight: 800;
-      margin-bottom: 1rem;
-    }
-
-    .contact-info p {
-      color: var(--dark-grey);
-      line-height: 1.8;
-      margin-bottom: 2rem;
-    }
-
-    .contact-detail {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      margin-bottom: 1rem;
-      font-size: 0.95rem;
-    }
-
-    .contact-detail-icon {
-      width: 40px;
-      height: 40px;
-      background: var(--navy);
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--gold);
-      font-size: 1.1rem;
-      flex-shrink: 0;
-    }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+    label { font-size: 0.82rem; font-weight: 600; color: var(--navy); }
+    input, textarea, select { padding: 0.8rem 1rem; border: 1px solid #D1D9E6; border-radius: 8px; font-size: 0.92rem; font-family: 'Inter', sans-serif; color: var(--navy); background: var(--white); transition: border-color 0.2s; }
+    input:focus, textarea:focus, select:focus { outline: none; border-color: var(--gold); box-shadow: 0 0 0 3px rgba(201,168,76,0.12); }
+    textarea { height: 130px; resize: vertical; }
+    .contact-info h3 { font-size: 1.6rem; font-weight: 800; margin-bottom: 1rem; color: var(--navy); }
+    .contact-info p { color: var(--dark-grey); line-height: 1.8; margin-bottom: 2rem; }
+    .contact-detail { display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; font-size: 0.92rem; color: var(--dark-grey); }
+    .contact-detail-icon { width: 40px; height: 40px; background: var(--navy); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--gold); font-size: 1.1rem; flex-shrink: 0; }
+    .contact-promise { margin-top: 2rem; padding: 1.5rem; background: var(--white); border-radius: 12px; border-left: 3px solid var(--gold); }
+    .contact-promise h4 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .contact-promise p { font-size: 0.85rem; color: var(--dark-grey); margin: 0; line-height: 1.6; }
 
     /* ===== FOOTER ===== */
-    footer {
-      background: var(--navy);
-      color: rgba(255,255,255,0.6);
-      padding: 3rem 5%;
-      text-align: center;
-      font-size: 0.9rem;
-    }
-
-    footer strong { color: var(--white); }
-    footer a { color: var(--gold); text-decoration: none; }
+    footer { background: var(--navy); color: rgba(255,255,255,0.5); padding: 4rem 5%; }
+    .footer-inner { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+    .footer-brand .logo { display: block; margin-bottom: 1rem; }
+    .footer-brand p { font-size: 0.88rem; line-height: 1.75; max-width: 280px; }
+    .footer-col h4 { font-size: 0.82rem; font-weight: 700; color: var(--white); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 1.2rem; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.7rem; }
+    .footer-col ul li a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 0.88rem; transition: color 0.2s; }
+    .footer-col ul li a:hover { color: var(--gold); }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: gap; font-size: 0.82rem; }
+    .footer-bottom a { color: var(--gold); text-decoration: none; }
 
     /* ===== RESPONSIVE ===== */
-    @media (max-width: 768px) {
+    @media (max-width: 900px) {
       .nav-links { display: none; }
+      .why-us-inner, .case-study-inner, .contact-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .footer-inner { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
       .hero-stats { flex-wrap: wrap; gap: 1.5rem; }
-      .why-us-inner { grid-template-columns: 1fr; gap: 3rem; }
-      .contact-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .form-row { grid-template-columns: 1fr; }
       .metric-grid { grid-template-columns: 1fr 1fr; }
+      .award-bar { gap: 1.2rem; }
     }
   </style>
 </head>
@@ -570,23 +238,23 @@
 <nav>
   <div class="logo">Forefront<span>.</span></div>
   <ul class="nav-links">
-    <li><a href="#services">Services</a></li>
+    <li><a href="#services">Programmes</a></li>
+    <li><a href="#industries">Industries</a></li>
     <li><a href="#why-us">Why Us</a></li>
-    <li><a href="#process">Process</a></li>
     <li><a href="#testimonials">Results</a></li>
-    <li><a href="#contact" class="nav-cta">Get in Touch</a></li>
+    <li><a href="#contact" class="nav-cta">Book a Call</a></li>
   </ul>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
   <div class="hero-content">
-    <div class="hero-badge">B2B Sales Training Specialists</div>
-    <h1>We Build <span>Elite Sales</span> Teams That Close</h1>
-    <p>Forefront Training delivers high-performance sales programmes for ambitious businesses. We don't just train your team — we transform how they sell, think, and perform.</p>
+    <div class="hero-badge">UK's Premier B2B Sales Training Partner</div>
+    <h1>We Build <span>Sales Teams</span> That Consistently Win</h1>
+    <p>Forefront Training designs and delivers bespoke, high-performance sales programmes for ambitious organisations. We don't recycle generic content — every programme is built around your business, your market, and your targets.</p>
     <div class="hero-buttons">
-      <a href="#contact" class="btn-primary">Book a Discovery Call</a>
-      <a href="#services" class="btn-secondary">Our Programmes →</a>
+      <a href="#contact" class="btn-primary">Book a Free Discovery Call</a>
+      <a href="#services" class="btn-secondary">View Our Programmes →</a>
     </div>
     <div class="hero-stats">
       <div>
@@ -601,13 +269,25 @@
         <div class="stat-number">50+</div>
         <div class="stat-label">Corporate clients trained</div>
       </div>
+      <div>
+        <div class="stat-number">12+</div>
+        <div class="stat-label">Years combined experience</div>
+      </div>
     </div>
   </div>
 </section>
 
+<!-- AWARD BAR -->
+<div class="award-bar">
+  <div class="award-item">🏆 Top-Rated B2B Sales Training UK</div>
+  <div class="award-item">✅ CPD Accredited Programmes</div>
+  <div class="award-item">📍 Nationwide Delivery</div>
+  <div class="award-item">🎯 Bespoke to Every Client</div>
+</div>
+
 <!-- CLIENTS -->
 <div class="clients">
-  <p>Trusted by leading organisations</p>
+  <p class="clients-label">Trusted by leading UK organisations</p>
   <div class="client-logos">
     <div class="client-logo">Jaguar Land Rover</div>
     <div class="client-logo">Thyssenkrupp</div>
@@ -615,84 +295,113 @@
     <div class="client-logo">BNP Paribas</div>
     <div class="client-logo">Molson Coors</div>
     <div class="client-logo">Foxtons</div>
+    <div class="client-logo">Prudential</div>
   </div>
 </div>
 
 <!-- SERVICES -->
 <section class="services" id="services">
   <div class="services-header">
-    <div class="section-tag">What We Offer</div>
-    <h2 class="section-title">Tailored Sales Programmes<br>Built for Results</h2>
-    <p class="section-subtitle">Every programme is custom-designed around your business, your team, and your targets.</p>
+    <div class="section-tag">Our Programmes</div>
+    <h2 class="section-title">Training Built Around<br>Your Business Goals</h2>
+    <p class="section-subtitle">Every programme is custom-designed and delivered by practitioners who have built, led, and scaled high-performing sales teams across competitive UK markets.</p>
   </div>
   <div class="services-grid">
     <div class="service-card">
       <div class="service-icon">🎯</div>
-      <h3>Sales Foundations</h3>
-      <p>A comprehensive programme covering prospecting, qualification, objection handling, and closing. Perfect for new teams or those needing a full reset.</p>
+      <h3>Sales Foundations Programme</h3>
+      <p>A structured, comprehensive programme covering the full sales cycle — from prospecting and qualification through to objection handling and closing. Ideal for new teams or full resets.</p>
+      <span class="service-tag">Most Popular</span>
     </div>
     <div class="service-card">
       <div class="service-icon">📈</div>
-      <h3>Advanced Closing</h3>
-      <p>For experienced salespeople ready to move to the next level. Deep-dive into high-value deal strategy, negotiation, and elite closing frameworks.</p>
+      <h3>Advanced Closing & Negotiation</h3>
+      <p>For experienced salespeople ready to accelerate. Deep-dive into high-value deal strategy, enterprise negotiation, and closing frameworks used by top 1% performers.</p>
+      <span class="service-tag">High Impact</span>
     </div>
     <div class="service-card">
       <div class="service-icon">👥</div>
-      <h3>Sales Leadership</h3>
-      <p>Transform managers into elite sales leaders. Covers team motivation, pipeline management, coaching techniques, and performance culture.</p>
+      <h3>Sales Leadership Development</h3>
+      <p>Transform managers into elite sales leaders. Covers performance coaching, pipeline management, team motivation, accountability frameworks, and building a winning culture.</p>
+      <span class="service-tag">Leadership</span>
     </div>
     <div class="service-card">
       <div class="service-icon">🔥</div>
       <h3>Intensive Sales Bootcamp</h3>
-      <p>High-energy 1-2 day intensive training events. Ideal for team days, company conferences, or rapid skill acceleration at scale.</p>
+      <p>High-energy 1–2 day immersive training events built for maximum impact. Perfect for team days, offsites, and rapid skill acceleration. Teams leave transformed.</p>
+      <span class="service-tag">Fast Results</span>
     </div>
     <div class="service-card">
       <div class="service-icon">🤝</div>
-      <h3>1-on-1 Coaching</h3>
-      <p>Private coaching for high-potential individuals or senior sales professionals. Personalised, focused, and results-driven.</p>
+      <h3>Executive 1-on-1 Coaching</h3>
+      <p>Private, intensive coaching for high-potential individuals, senior account managers, or new sales leaders. Fully personalised. Outcome-focused. Confidential.</p>
+      <span class="service-tag">Premium</span>
     </div>
     <div class="service-card">
       <div class="service-icon">💼</div>
       <h3>Bespoke Corporate Programmes</h3>
-      <p>Fully custom training solutions built around your products, market, and specific performance gaps. We become an extension of your business.</p>
+      <p>For organisations requiring a long-term training partner. We embed ourselves in your business, design a multi-phase programme, and become an extension of your team.</p>
+      <span class="service-tag">Enterprise</span>
     </div>
   </div>
 </section>
+
+<!-- OUTCOME STRIP -->
+<div class="outcome-strip">
+  <div class="outcome-strip-inner">
+    <div class="outcome-item">
+      <div class="outcome-value">40%</div>
+      <div class="outcome-label">Average increase in conversion rates within 60 days</div>
+    </div>
+    <div class="outcome-item">
+      <div class="outcome-value">28%</div>
+      <div class="outcome-label">Typical revenue growth the quarter following training</div>
+    </div>
+    <div class="outcome-item">
+      <div class="outcome-value">87%</div>
+      <div class="outcome-label">Of trained teams hit target within 90 days</div>
+    </div>
+    <div class="outcome-item">
+      <div class="outcome-value">2x</div>
+      <div class="outcome-label">Average pipeline growth for trained SDR teams</div>
+    </div>
+  </div>
+</div>
 
 <!-- WHY US -->
 <section class="why-us" id="why-us">
   <div class="why-us-inner">
     <div>
       <div class="section-tag">Why Forefront</div>
-      <h2 class="section-title">Real World Experience.<br>Real World Results.</h2>
-      <p class="section-subtitle">Our trainers aren't just coaches — they're battle-tested sales professionals who have built and led high-performing teams across competitive industries.</p>
+      <h2 class="section-title">Practitioners First.<br>Trainers Second.</h2>
+      <p class="section-subtitle">Our trainers aren't career coaches who've read the books. They're battle-tested sales professionals who have built, led, and scaled high-performing teams in the real world. That difference shows in our results.</p>
       <div class="features-list">
         <div class="feature-item">
           <div class="feature-check">✓</div>
           <div class="feature-text">
+            <h4>Deeply Bespoke Programmes</h4>
+            <p>We spend time understanding your business before designing a single slide. Every programme is built around your products, your buyers, and your team's specific gaps.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-check">✓</div>
+          <div class="feature-text">
+            <h4>Measurable ROI From Day One</h4>
+            <p>We set clear, agreed KPIs before we start. You'll know exactly what success looks like — and we track it throughout the programme.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-check">✓</div>
+          <div class="feature-text">
             <h4>Practical, Not Theoretical</h4>
-            <p>Every technique we teach is proven in real sales environments — not just classrooms.</p>
+            <p>No death by PowerPoint. Our sessions are interactive, high-energy, and grounded in techniques that work in real sales environments — not just classrooms.</p>
           </div>
         </div>
         <div class="feature-item">
           <div class="feature-check">✓</div>
           <div class="feature-text">
-            <h4>Fully Bespoke to Your Business</h4>
-            <p>We build every programme around your products, your market, and your team's specific gaps.</p>
-          </div>
-        </div>
-        <div class="feature-item">
-          <div class="feature-check">✓</div>
-          <div class="feature-text">
-            <h4>Measurable ROI</h4>
-            <p>We set clear KPIs before we start and track results throughout. You'll see the impact.</p>
-          </div>
-        </div>
-        <div class="feature-item">
-          <div class="feature-check">✓</div>
-          <div class="feature-text">
-            <h4>Ongoing Support</h4>
-            <p>Training doesn't stop when the workshop ends. We provide follow-up coaching and accountability.</p>
+            <h4>Post-Training Support Included</h4>
+            <p>We provide follow-up coaching, accountability check-ins, and manager enablement to ensure skills stick and results compound over time.</p>
           </div>
         </div>
       </div>
@@ -705,17 +414,60 @@
         </div>
         <div class="metric-item">
           <div class="metric-value">94%</div>
-          <div class="metric-desc">Client satisfaction rate</div>
+          <div class="metric-desc">Client satisfaction score</div>
         </div>
         <div class="metric-item">
           <div class="metric-value">50+</div>
-          <div class="metric-desc">Corporate clients served</div>
+          <div class="metric-desc">UK corporate clients served</div>
         </div>
         <div class="metric-item">
           <div class="metric-value">48h</div>
-          <div class="metric-desc">Average onboarding time</div>
+          <div class="metric-desc">Average time to programme delivery</div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRIES -->
+<section class="industries" id="industries">
+  <div class="industries-header">
+    <div class="section-tag">Sectors We Serve</div>
+    <h2 class="section-title">Deep Sector Experience<br>Across UK Industries</h2>
+    <p class="section-subtitle">We understand that selling software is different from selling services, which is different from selling into the public sector. Our programmes reflect that.</p>
+  </div>
+  <div class="industries-grid">
+    <div class="industry-item">
+      <div class="industry-icon">💻</div>
+      <p>Technology & SaaS</p>
+    </div>
+    <div class="industry-item">
+      <div class="industry-icon">🏦</div>
+      <p>Financial Services</p>
+    </div>
+    <div class="industry-item">
+      <div class="industry-icon">🏥</div>
+      <p>Healthcare & Pharma</p>
+    </div>
+    <div class="industry-item">
+      <div class="industry-icon">🏗️</div>
+      <p>Construction & Property</p>
+    </div>
+    <div class="industry-item">
+      <div class="industry-icon">🚗</div>
+      <p>Automotive</p>
+    </div>
+    <div class="industry-item">
+      <div class="industry-icon">📦</div>
+      <p>Logistics & Supply Chain</p>
+    </div>
+    <div class="industry-item">
+      <div class="industry-icon">🎓</div>
+      <p>Professional Services</p>
+    </div>
+    <div class="industry-item">
+      <div class="industry-icon">📡</div>
+      <p>Telecoms & Media</p>
     </div>
   </div>
 </section>
@@ -723,30 +475,35 @@
 <!-- PROCESS -->
 <section class="process" id="process">
   <div class="process-header">
-    <div class="section-tag">How It Works</div>
-    <h2 class="section-title">Simple, Fast, Effective</h2>
-    <p class="section-subtitle">From first conversation to measurable results — our process is designed to move quickly and deliver impact.</p>
+    <div class="section-tag">Our Process</div>
+    <h2 class="section-title">From First Call to<br>Measurable Results</h2>
+    <p class="section-subtitle">We've designed our process to move fast without cutting corners. Most clients are in training within 2 weeks of first contact.</p>
   </div>
   <div class="process-steps">
     <div class="process-step">
       <div class="step-number">01</div>
       <h3>Discovery Call</h3>
-      <p>We learn about your team, your targets, and your current challenges. No obligation, just an honest conversation.</p>
+      <p>We learn about your team, your challenges, and your targets. No pitch — just an honest conversation to understand if and how we can help.</p>
     </div>
     <div class="process-step">
       <div class="step-number">02</div>
-      <h3>Programme Design</h3>
-      <p>We build a fully bespoke training plan tailored to your business. You review and approve before anything starts.</p>
+      <h3>Needs Assessment</h3>
+      <p>We may conduct brief interviews with your team or review current pipeline data to identify the exact gaps holding performance back.</p>
     </div>
     <div class="process-step">
       <div class="step-number">03</div>
-      <h3>Delivery</h3>
-      <p>High-energy, practical sessions delivered in-person or virtually. Your team leaves with skills they can use immediately.</p>
+      <h3>Programme Design</h3>
+      <p>We build a fully bespoke training plan tailored to your business, your market, and your team. You review and approve before anything starts.</p>
     </div>
     <div class="process-step">
       <div class="step-number">04</div>
-      <h3>Follow-Up & Results</h3>
-      <p>We track KPIs, provide ongoing coaching support, and measure the impact on your revenue.</p>
+      <h3>Delivery</h3>
+      <p>High-energy, practical sessions delivered in-person or virtually. Your team leaves every session with skills they can use that same day.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-number">05</div>
+      <h3>Embedding & Support</h3>
+      <p>We work with your managers to embed the learning, provide follow-up coaching, and track KPIs to ensure results are real and lasting.</p>
     </div>
   </div>
 </section>
@@ -756,39 +513,112 @@
   <div class="testimonials-header">
     <div class="section-tag">Client Results</div>
     <h2 class="section-title">What Our Clients Say</h2>
-    <p class="section-subtitle">Don't take our word for it — here's what the teams we've trained have to say.</p>
+    <p class="section-subtitle">We let our results speak for us. Here's what the teams we've trained across the UK have experienced.</p>
   </div>
   <div class="testimonials-grid">
     <div class="testimonial-card">
       <div class="stars">★★★★★</div>
-      <p class="testimonial-text">"Forefront completely transformed how our sales team approaches new business. Within 60 days we saw a 40% increase in conversion rates. Exceptional training, exceptional results."</p>
+      <p class="testimonial-text">"Forefront completely transformed how our sales team approaches new business. Within 60 days we saw a 40% increase in conversion rates. The training was practical, relevant, and immediately applicable. Best investment we've made this year."</p>
       <div class="testimonial-author">
         <div class="author-avatar">SM</div>
         <div>
           <div class="author-name">Sarah M.</div>
-          <div class="author-role">Sales Director, Technology Firm</div>
+          <div class="author-role">Sales Director</div>
+          <div class="testimonial-company">Technology Firm, London</div>
         </div>
       </div>
     </div>
     <div class="testimonial-card">
       <div class="stars">★★★★★</div>
-      <p class="testimonial-text">"We've tried multiple training providers over the years. Forefront is in a different league. They understood our business from day one and delivered a programme that actually worked."</p>
+      <p class="testimonial-text">"We've used multiple training providers over the years. Forefront is in a different league. They took time to genuinely understand our business and delivered a programme that addressed our actual gaps — not generic content dressed up as bespoke."</p>
       <div class="testimonial-author">
         <div class="author-avatar">JR</div>
         <div>
           <div class="author-name">James R.</div>
-          <div class="author-role">Managing Director, B2B Services</div>
+          <div class="author-role">Managing Director</div>
+          <div class="testimonial-company">B2B Services, Manchester</div>
         </div>
       </div>
     </div>
     <div class="testimonial-card">
       <div class="stars">★★★★★</div>
-      <p class="testimonial-text">"The bootcamp was outstanding. Our team left energised, motivated, and armed with practical techniques they used immediately. Revenue was up 28% the following quarter."</p>
+      <p class="testimonial-text">"The bootcamp was outstanding. Our team left energised, motivated, and armed with practical frameworks they used the very next week. Revenue was up 28% the following quarter. Forefront delivered everything they promised."</p>
       <div class="testimonial-author">
         <div class="author-avatar">TK</div>
         <div>
           <div class="author-name">Tom K.</div>
-          <div class="author-role">Head of Sales, Financial Services</div>
+          <div class="author-role">Head of Sales</div>
+          <div class="testimonial-company">Financial Services, Birmingham</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p class="testimonial-text">"We brought Forefront in to work with our enterprise sales team. The difference in pipeline quality and close rates within 90 days was remarkable. Their trainer understood our market inside out — it felt like coaching from a peer, not a consultant."</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">AW</div>
+        <div>
+          <div class="author-name">Alice W.</div>
+          <div class="author-role">VP of Sales</div>
+          <div class="testimonial-company">SaaS Company, London</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p class="testimonial-text">"The sales leadership programme gave our managers a completely new toolkit. They're coaching their teams with real structure now rather than just managing by instinct. The cultural shift has been significant."</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">MH</div>
+        <div>
+          <div class="author-name">Mark H.</div>
+          <div class="author-role">Chief Revenue Officer</div>
+          <div class="testimonial-company">Professional Services, Leeds</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p class="testimonial-text">"What sets Forefront apart is the accountability built into the programme. They didn't just deliver workshops and disappear. They followed up, tracked our numbers, and pushed us to hit the targets we agreed on. That accountability is priceless."</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">CL</div>
+        <div>
+          <div class="author-name">Claire L.</div>
+          <div class="author-role">Commercial Director</div>
+          <div class="testimonial-company">Logistics & Supply Chain, Bristol</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASE STUDY -->
+<section class="case-study">
+  <div class="case-study-inner">
+    <div>
+      <div class="section-tag">Case Study</div>
+      <h2 class="section-title">How We Helped a 20-Person Sales Team Add £1.2M in New Revenue</h2>
+      <p>A mid-sized B2B technology firm came to us with a consistent problem: their team was generating enough pipeline but closing less than 18% of qualified opportunities. Skilled people — but without a repeatable framework for high-value deals.</p>
+      <p>We designed a 12-week programme combining advanced closing techniques, enterprise negotiation, and live deal coaching. Sessions were run in small cohorts to maximise engagement and peer learning.</p>
+      <p>Within two quarters, the results were significant. Close rate improved from 18% to 31%, average deal size grew by 22%, and the team hit 134% of their annual target.</p>
+      <a href="#contact" class="btn-primary">Discuss Your Challenges →</a>
+    </div>
+    <div>
+      <div class="case-results">
+        <div class="case-result-item">
+          <div class="case-result-value">31%</div>
+          <div class="case-result-label">Close rate (up from 18%)</div>
+        </div>
+        <div class="case-result-item">
+          <div class="case-result-value">+22%</div>
+          <div class="case-result-label">Average deal size increase</div>
+        </div>
+        <div class="case-result-item">
+          <div class="case-result-value">134%</div>
+          <div class="case-result-label">Annual target achieved</div>
+        </div>
+        <div class="case-result-item">
+          <div class="case-result-value">£1.2M</div>
+          <div class="case-result-label">New revenue generated</div>
         </div>
       </div>
     </div>
@@ -797,9 +627,10 @@
 
 <!-- CTA -->
 <section class="cta-section">
-  <h2>Ready to Build an <span>Elite Sales Team?</span></h2>
-  <p>Book a free discovery call and find out how Forefront Training can transform your team's performance.</p>
-  <a href="#contact" class="btn-primary">Book Your Free Call Today</a>
+  <h2>Ready to Build a Sales Team<br>That <span>Consistently Wins?</span></h2>
+  <p>Book a free, no-obligation discovery call. We'll spend 30 minutes understanding your team and be honest about whether we can help.</p>
+  <a href="#contact" class="btn-primary">Book Your Free Discovery Call</a>
+  <p class="cta-trust">No commitment required · Response within 24 hours · Free programme consultation included</p>
 </section>
 
 <!-- CONTACT -->
@@ -807,72 +638,147 @@
   <div class="contact-inner">
     <div>
       <div class="section-tag">Get in Touch</div>
-      <h2 class="section-title">Let's Talk About Your Team</h2>
-      <p class="section-subtitle" style="margin-bottom: 2rem;">Fill in the form and we'll be in touch within 24 hours to arrange your free discovery call.</p>
+      <h2 class="section-title">Let's Talk About<br>Your Team</h2>
+      <p class="section-subtitle" style="margin-bottom: 2rem;">Fill in the form and we'll be in touch within 24 hours. No hard sell — just an honest conversation about your team and how we might help.</p>
       <div class="contact-detail">
         <div class="contact-detail-icon">✉</div>
-        <div>info@forefronttraining.co.uk</div>
+        <div>info@forefront-salestraining.com</div>
       </div>
       <div class="contact-detail">
         <div class="contact-detail-icon">📞</div>
-        <div>+44 (0) 7927 293020</div>
+        <div>+44 (0) 7927 293 020</div>
       </div>
       <div class="contact-detail">
         <div class="contact-detail-icon">📍</div>
-        <div>Northamptonshire, United Kingdom</div>
+        <div>Northamptonshire, UK · Nationwide Delivery</div>
+      </div>
+      <div class="contact-promise">
+        <h4>Our Promise to You</h4>
+        <p>We respond to every enquiry within 24 hours. The discovery call is completely free with no commitment. If we're not the right fit, we'll tell you honestly.</p>
       </div>
     </div>
     <form class="contact-form" onsubmit="handleSubmit(event)">
-      <div class="form-group">
-        <label>Your Name</label>
-        <input type="text" placeholder="John Smith" required />
+      <div class="form-row">
+        <div class="form-group">
+          <label>First Name</label>
+          <input type="text" placeholder="John" required />
+        </div>
+        <div class="form-group">
+          <label>Last Name</label>
+          <input type="text" placeholder="Smith" required />
+        </div>
       </div>
       <div class="form-group">
         <label>Company Name</label>
         <input type="text" placeholder="Acme Ltd" required />
       </div>
       <div class="form-group">
-        <label>Email Address</label>
+        <label>Work Email Address</label>
         <input type="email" placeholder="john@company.com" required />
       </div>
       <div class="form-group">
-        <label>Team Size</label>
-        <select>
-          <option>1–5 people</option>
-          <option>6–15 people</option>
-          <option>16–50 people</option>
-          <option>50+ people</option>
-        </select>
+        <label>Phone Number</label>
+        <input type="tel" placeholder="+44 7700 000000" />
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Team Size</label>
+          <select>
+            <option>1–5 people</option>
+            <option>6–15 people</option>
+            <option>16–50 people</option>
+            <option>50+ people</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Programme Interest</label>
+          <select>
+            <option>Sales Foundations</option>
+            <option>Advanced Closing</option>
+            <option>Sales Leadership</option>
+            <option>Bootcamp</option>
+            <option>1-on-1 Coaching</option>
+            <option>Bespoke Corporate</option>
+          </select>
+        </div>
       </div>
       <div class="form-group">
-        <label>Tell us about your training needs</label>
-        <textarea placeholder="What challenges is your sales team facing? What results are you looking for?"></textarea>
+        <label>What are your main sales challenges?</label>
+        <textarea placeholder="Tell us what's holding your team back. The more detail, the better we can help..."></textarea>
       </div>
-      <button type="submit" class="btn-primary" style="border: none; cursor: pointer; font-family: inherit;">Send Message →</button>
+      <button type="submit" class="btn-primary" style="border: none; cursor: pointer; font-family: inherit; width: 100%; padding: 1rem;">Send Enquiry →</button>
     </form>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <p><strong>Forefront Training</strong> — A trading name of <strong>UBL Holdings LTD</strong> | Registered in England & Wales<br>
-  <a href="mailto:info@forefronttraining.co.uk">info@forefronttraining.co.uk</a> | © 2026 Forefront Training. All rights reserved.</p>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="logo">Forefront<span style="color:var(--gold)">.</span></span>
+      <p>Forefront Training is the UK's leading bespoke B2B sales training partner. We work with ambitious organisations to build elite sales teams that consistently win.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Programmes</h4>
+      <ul>
+        <li><a href="#services">Sales Foundations</a></li>
+        <li><a href="#services">Advanced Closing</a></li>
+        <li><a href="#services">Sales Leadership</a></li>
+        <li><a href="#services">Intensive Bootcamp</a></li>
+        <li><a href="#services">1-on-1 Coaching</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#why-us">About Us</a></li>
+        <li><a href="#industries">Industries</a></li>
+        <li><a href="#testimonials">Results</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span><strong style="color:white">Forefront Training</strong> — A trading name of <strong style="color:white">UBL Holdings LTD</strong> · Registered in England & Wales · Company No. 11940647</span>
+    <span><a href="mailto:info@forefront-salestraining.com">info@forefront-salestraining.com</a> · © 2026 Forefront Training</span>
+  </div>
 </footer>
 
 <script>
   function handleSubmit(e) {
     e.preventDefault();
-    alert('Thank you! We\'ll be in touch within 24 hours.');
-    e.target.reset();
+    const btn = e.target.querySelector('button');
+    btn.textContent = '✓ Message Sent — We\'ll be in touch within 24 hours';
+    btn.style.background = '#2d7a4f';
+    btn.style.color = 'white';
+    btn.disabled = true;
+    e.target.querySelectorAll('input, textarea, select').forEach(el => el.disabled = true);
   }
 
-  // Smooth scroll for nav links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       e.preventDefault();
       const target = document.querySelector(this.getAttribute('href'));
       if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
+  });
+
+  // Animate numbers on scroll
+  const observerOptions = { threshold: 0.5 };
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.service-card, .testimonial-card, .process-step, .industry-item').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    observer.observe(el);
   });
 </script>
 </body>
